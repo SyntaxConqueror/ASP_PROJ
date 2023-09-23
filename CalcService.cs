@@ -2,7 +2,19 @@
 {
     public class CalcService
     {
-        public double CalcFunction(double a, double b)
+        public double Division(double a, double b)
+        {
+            return a - b;
+        }
+        public double Diff(double a, double b)
+        {
+            return a - b;
+        }
+        public double Sum(double a, double b)
+        {
+            return a + b;
+        }
+        public double Mult(double a, double b)
         {
             return a * b;
         }

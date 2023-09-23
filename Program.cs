@@ -26,7 +26,7 @@ Company[] company_array = [google, apple, microsoft];
 app.MapGet("/most-employeers", () => Company.EmployeersAmountStatistic(company_array));
 app.MapGet("/randomInt", () => "" + new Random().Next(0, 101));
 app.MapGet("/info", () => MyInfo.GetInfoFromJson(jsonMyInfoPath));
-app.MapGet("/calc", () => app.Services.GetService<CalcService>().CalcFunction(3.5, 6.4));
+app.MapGet("/calc", () => app.Services.GetService<CalcService>().Mult(3.5, 6.4));
 
 app.Run(async context =>
 {
