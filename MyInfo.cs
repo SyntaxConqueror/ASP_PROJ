@@ -16,18 +16,6 @@ namespace ASP_PROJ
 
         [JsonPropertyName("destination")]
         public string Destination { get; set; }
-
-        public static string GetInfoFromJson(string filePath)
-        {
-            string jsonString = File.ReadAllText(filePath);
-            MyInfo myInfo = JsonSerializer.Deserialize<MyInfo>(jsonString);
-
-            string formattedInfo = $"Name: {myInfo.Name}\n" +
-                                $"Last name: {myInfo.LastName}\n" +
-                                $"Age: {myInfo.Age}\n" +
-                                $"Destination: {myInfo.Destination}";
-
-            return formattedInfo;
-        }
+        
     }
 }

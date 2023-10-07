@@ -1,42 +1,88 @@
-using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
 using System.IO;
-using System.Text.Json;
-using System.Xml;
-using System.Text.Json.Serialization;
-using Microsoft.Extensions.Configuration.Ini;
 using ASP_PROJ;
+using System.Text.Json.Serialization;
+using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddTransient<CalcService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("config.json")
+    .Build();
 
-string xmlFilePath = "apple.xml";
-string jsonFilePath = "microsoft.json";
-string iniFilePath = "google.ini";
-string jsonMyInfoPath = "me.json";
 
-Company google = Company.setCompanyFromIni(iniFilePath);
-Company microsoft = Company.setCompanyFromJson(jsonFilePath);
-Company apple = Company.setCompanyFromXML(xmlFilePath);
+var myConfiguration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("me.json")
+    .Build();
 
-Company[] company_array = [google, apple, microsoft];
+app.UseRouting();
 
-app.MapGet("/most-employeers", () => Company.EmployeersAmountStatistic(company_array));
-app.MapGet("/randomInt", () => "" + new Random().Next(0, 101));
-app.MapGet("/info", () => MyInfo.GetInfoFromJson(jsonMyInfoPath));
-app.MapGet("/calc", () => app.Services.GetService<CalcService>().Mult(3.5, 6.4));
+app.MapGet("/", (HttpContext context) => "Hello, world!");
 
-app.Run(async context =>
+app.MapGet("/Library", (HttpContext context) =>
 {
-    var calcService = app.Services.GetService<CalcService>();
-    context.Response.ContentType = "text/html;charset=utf-8";
-    await context.Response.WriteAsync($"Time: {calcService?.GetTime()}");
+    context.Response.ContentType = "application/json; charset=utf-8";
+    return "Привіт, ви у бібліотеці!";
 });
+
+app.MapGet("/Library/Books", (HttpContext context) =>
+{
+
+    var booksConfig = configuration.GetSection($"Books").Get<List<BooksConfig>>();
+
+    context.Response.ContentType = "application/json; charset=utf-8";
+
+    string result = "Список книг наявних у бібліотеці: \n\n";
+    for(int i = 0; i < booksConfig.Count(); i++)
+    {
+        result += $"\tНазва книги: {booksConfig[i].Title}\n\n";
+    }
+    return result;
+});
+
+app.MapGet("/Library/Profile/{id:int?}", (HttpContext context) =>
+{
+    context.Response.ContentType = "application/json; charset=utf-8";
+    if (context.Request.RouteValues.TryGetValue("id", out var idObj) && int.TryParse(idObj.ToString(), out var userId))
+    {
+        var userConfig = configuration.GetSection($"Users:{userId}").Get<UserConfig>();
+        if (userId >= 0 && userId <= 5 && userConfig != null)
+        {
+             return $"Інформація про користувача з id={userId}: {userConfig.Name}, {userConfig.Email}";
+        }
+        
+    }
+
+    var myConfig = myConfiguration.Get<MyInfo>();
+    return  $"Інформація про користувача: " +
+            $"\nІм'я: {myConfig.Name}" +
+            $"\nПрізвище: {myConfig.LastName}" +
+            $"\nВік: {myConfig.Age}" +
+            $"\nПокликання: {myConfig.Destination}";
+});
+
 
 app.Run();
 
 
+public class UserConfig
+{
+    [JsonPropertyName("Name")]
+    public string Name { get; set; }
+    public string Email { get; set; }
+}
 
-
+public class BooksConfig
+{
+    public string Title {  get; set; }
+}
