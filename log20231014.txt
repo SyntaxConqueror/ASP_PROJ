@@ -1,0 +1,7 @@
+2023-10-14 12:37:37.039 +03:00 [ERR] An unhandled exception occurred
+System.FormatException: String '' was not recognized as a valid DateTime.
+   at System.DateTime.Parse(String s)
+   at Program.<>c.<<Main>$>b__0_2(HttpContext context) in C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\Program.cs:line 46
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)

@@ -5,84 +5,66 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
-using ASP_PROJ;
-using System.Text.Json.Serialization;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.Json;
+using Serilog;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers();
-
 var app = builder.Build();
-var configuration = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("config.json")
-    .Build();
 
-
-var myConfiguration = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("me.json")
-    .Build();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 app.UseRouting();
 
-app.MapGet("/", (HttpContext context) => "Hello, world!");
+app.UseStaticFiles();
 
-app.MapGet("/Library", (HttpContext context) =>
+app.UseExceptionHandler(errorApp =>
 {
-    context.Response.ContentType = "application/json; charset=utf-8";
-    return "Привіт, ви у бібліотеці!";
+    errorApp.Run(async context =>
+    {
+        var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+        var exception = exceptionHandlerPathFeature.Error;
+
+        Log.Error(exception, "An unhandled exception occurred");
+
+        await context.Response.WriteAsync("An error occurred. Please check the log for details.");
+    });
 });
 
-app.MapGet("/Library/Books", (HttpContext context) =>
+app.MapGet("/", (HttpContext context) =>
 {
-
-    var booksConfig = configuration.GetSection($"Books").Get<List<BooksConfig>>();
-
-    context.Response.ContentType = "application/json; charset=utf-8";
-
-    string result = "Список книг наявних у бібліотеці: \n\n";
-    for(int i = 0; i < booksConfig.Count(); i++)
-    {
-        result += $"\tНазва книги: {booksConfig[i].Title}\n\n";
-    }
-    return result;
+    return context.Response.SendFileAsync("index.html");
 });
 
-app.MapGet("/Library/Profile/{id:int?}", (HttpContext context) =>
-{
-    context.Response.ContentType = "application/json; charset=utf-8";
-    if (context.Request.RouteValues.TryGetValue("id", out var idObj) && int.TryParse(idObj.ToString(), out var userId))
-    {
-        var userConfig = configuration.GetSection($"Users:{userId}").Get<UserConfig>();
-        if (userId >= 0 && userId <= 5 && userConfig != null)
-        {
-             return $"Інформація про користувача з id={userId}: {userConfig.Name}, {userConfig.Email}";
-        }
-        
-    }
 
-    var myConfig = myConfiguration.Get<MyInfo>();
-    return  $"Інформація про користувача: " +
-            $"\nІм'я: {myConfig.Name}" +
-            $"\nПрізвище: {myConfig.LastName}" +
-            $"\nВік: {myConfig.Age}" +
-            $"\nПокликання: {myConfig.Destination}";
+app.MapGet("/sendToCookies", (HttpContext context) =>
+{
+    string inputValue = context.Request.Query["inputValue"];
+    string dateTimeValue = context.Request.Query["dateTimeValue"];
+    DateTime exp = DateTime.Parse(dateTimeValue);
+
+    // Set cookies with expiration
+    context.Response.Cookies.Append("InputValue", inputValue, new CookieOptions { Expires = exp });
+    context.Response.Cookies.Append("DateTimeValue", dateTimeValue, new CookieOptions { Expires = exp });
+
+    // Construct an HTML response
+    string htmlResponse = 
+    $"<html>" +
+    $"<body>" +
+        $"<span>Data has been stored in cookies.</span><br>" +
+        $"<span>InputValue: {context.Request.Cookies["InputValue"]}</span><br>" +
+        $"<span>DateTimeValue: {context.Request.Cookies["DateTimeValue"]}</span>" +
+    $"</body>" +
+    $"</html>";
+
+    // Set the content type to HTML
+    context.Response.Headers.Add("Content-Type", "text/html");
+
+    // Write the HTML response to the output
+    return context.Response.WriteAsync(htmlResponse);
 });
 
 
 app.Run();
-
-
-public class UserConfig
-{
-    [JsonPropertyName("Name")]
-    public string Name { get; set; }
-    public string Email { get; set; }
-}
-
-public class BooksConfig
-{
-    public string Title {  get; set; }
-}

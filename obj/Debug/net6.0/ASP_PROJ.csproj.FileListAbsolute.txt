@@ -5,7 +5,6 @@ C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\De
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\ASP_PROJ.runtimeconfig.json
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\ASP_PROJ.dll
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\ASP_PROJ.pdb
-C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.csproj.AssemblyReference.cache
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.AssemblyInfoInputs.cache
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.AssemblyInfo.cs
@@ -26,3 +25,7 @@ C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\De
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\refint\ASP_PROJ.dll
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\me.json
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\config.json
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\Serilog.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.csproj.AssemblyReference.cache
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_PROJ\obj\Debug\net6.0\ASP_PROJ.csproj.CopyComplete
