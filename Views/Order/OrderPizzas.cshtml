@@ -1,0 +1,23 @@
+﻿
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Order Pizzas Forms";
+}
+
+@using (Html.BeginForm("ProcessOrders", "Order", FormMethod.Post))
+{
+    for (int i = 0; i < Model.Count; i++)
+    {
+        <div class="pizza-order">
+            <h3>Pizza @i</h3>
+            <label for="Model[@i].Name">Pizza Name:</label>
+            <input min="5" type="text" name="Model[@i].Name" />
+            <label for="Model[@i].Price">Price:</label>
+            <input min="1" type="number" name="Model[@i].Price" />
+        </div>
+        <br />
+    }
+
+    <input type="submit" value="Submit Orders" />
+}

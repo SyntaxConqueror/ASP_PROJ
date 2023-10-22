@@ -1,0 +1,18 @@
+﻿@model ASP_MVC_PROJ.Models.User
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to registration form</h1>
+    <form asp-controller="User" asp-action="Register" method="post">
+        <div class="form-group">
+            <label for="Name">Type your name:</label>
+            <input style="margin:1em 0;" asp-for="Name" class="form-control" id="Name" name="Name" min="3" placeholder="Type your name..." />
+            <label for="Age">Type your age:</label>
+            <input style="margin:1em 0;" asp-for="Age" class="form-control" id="Age" name="Age" min="1" placeholder="Type your age..." />
+        </div>
+        <button style="width:100%;" type="submit" class="btn btn-primary" style="margin-top: 1em;">Register</button>
+    </form>
+</div>
