@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wmEAGBGIJYBKRHHh4EGK3zv0BuKPUMbRcKK510796lM=",
+  "Hash": "JHacDutC2kDimTGbWC24p11/5Dtr0EjVvIlANMo3r9o=",
   "Source": "ASP_MVC_PROJ",
   "BasePath": "_content/ASP_MVC_PROJ",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\ASP\\ASP_MVC_PROJ\\wwwroot\\Files\\11.txt",
+      "SourceId": "ASP_MVC_PROJ",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\ASP\\ASP_MVC_PROJ\\wwwroot\\",
+      "BasePath": "_content/ASP_MVC_PROJ",
+      "RelativePath": "Files/11.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\11.txt"
     },
     {
       "Identity": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\ASP\\ASP_MVC_PROJ\\wwwroot\\js\\site.js",

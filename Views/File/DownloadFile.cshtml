@@ -1,0 +1,23 @@
+﻿@model ASP_MVC_PROJ.Models.UserFile
+
+@using (Html.BeginForm("DownloadFile", "File", FormMethod.Post))
+{
+    <div style="display: flex; flex-direction:column; gap:2em;">
+        <div>
+            @Html.LabelFor(model => model.FirstName)
+            @Html.TextBoxFor(model => model.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.LastName)
+            @Html.TextBoxFor(model => model.LastName)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.FileName)
+            @Html.TextBoxFor(model => model.FileName)
+        </div>
+        <div>
+            <input type="submit" value="Продовжити" />
+        </div>
+    </div>
+    
+}

@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/File/DownloadFile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxEb3dubG9hZEZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,40 +28,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Order/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Order/OrderPizzas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJQaXp6YXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Order/OrderProducts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJQcm9kdWN0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Order/ProcessOrders.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUHJvY2Vzc09yZGVycy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/User/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/User/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/User/RegistrationError.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RyYXRpb25FcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/1psyh/OneDrive/Рабочий стол/Универ/ASP/ASP_MVC_PROJ/Views/_ViewImports.cshtml]
