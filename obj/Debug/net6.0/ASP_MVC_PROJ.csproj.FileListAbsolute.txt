@@ -28,3 +28,6 @@ C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\ob
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\obj\Debug\net6.0\ASP_MVC_PROJ.pdb
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\obj\Debug\net6.0\ASP_MVC_PROJ.genruntimeconfig.cache
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\obj\Debug\net6.0\ref\ASP_MVC_PROJ.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\obj\Debug\net6.0\ASP_MVC_PROJ.csproj.AssemblyReference.cache
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\ASP\ASP_MVC_PROJ\obj\Debug\net6.0\ASP_MVC_PROJ.csproj.CopyComplete

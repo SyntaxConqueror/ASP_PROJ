@@ -21,9 +21,11 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "/",
-    pattern: "{controller=File}/{action=Index}/");
+    pattern: "{controller=Product}/{action=DisplayProducts}/");
 
-
+app.MapControllerRoute(
+    name: "/weather",
+    pattern: "{controller=Weather}/{action=Index}/");
 
 
 app.Run();

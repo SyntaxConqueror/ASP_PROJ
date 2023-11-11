@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yk2a/Iy7G6w4XA9i9KLGDwLcATdNV2Qt4c2y3G9H8SkZHUmPwispuot8Zbl6kbo2H2QSiXZg5RFaHQBp0j3D0w==",
+  "dgSpecHash": "9b532R23AGJu/LEO3tL1fLGwp5e5wgY37AAwqwmj9TjdJKKX1eKCeu2g3NpWv+JlDZOU6lBNeOnbQ7eh41+zgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\ASP\\ASP_MVC_PROJ\\ASP_MVC_PROJ.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\1psyh\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
