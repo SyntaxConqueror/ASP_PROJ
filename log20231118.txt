@@ -1,0 +1,13 @@
+2023-11-18 19:27:23.330 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:27:23
+2023-11-18 19:27:28.009 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.WeatherController.Index (ASP_MVC_PROJ)' called at 2023-11-18 19:27:28
+2023-11-18 19:27:31.839 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:27:31
+2023-11-18 19:33:29.647 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:33:29
+2023-11-18 19:33:29.666 +02:00 [INF] New unique user: System.Security.Claims.ClaimsPrincipal
+2023-11-18 19:34:39.758 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:34:39
+2023-11-18 19:34:39.775 +02:00 [INF] New unique user: System.Security.Claims.ClaimsIdentity
+2023-11-18 19:35:00.862 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:35:00
+2023-11-18 19:35:00.878 +02:00 [INF] New unique user: System.Security.Claims.ClaimsIdentity
+2023-11-18 19:35:11.005 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:35:11
+2023-11-18 19:35:11.021 +02:00 [INF] New unique user: System.Security.Claims.ClaimsIdentity
+2023-11-18 19:35:46.255 +02:00 [INF] Action 'ASP_MVC_PROJ.Controllers.ProductController.DisplayProducts (ASP_MVC_PROJ)' called at 2023-11-18 19:35:46
+2023-11-18 19:35:46.271 +02:00 [INF] New unique user: 

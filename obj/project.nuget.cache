@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "xDun36iKspm8AsNxXHgw6DKloNKKf3HUQPEt12otXRUvtCqW4exxMTU4sahrJHTNxjjTyjHrN7xrVOkeZVH42g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\ASP\\ASP_MVC_PROJ\\ASP_MVC_PROJ.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1psyh\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
